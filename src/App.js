@@ -3,7 +3,6 @@ import { Container, Navbar, NavbarBrand } from 'reactstrap';
 import NucampLogo from './app/assets/img/logo.png';
 import CampsitesList from './features/campsites/CampsitesList';
 import './App.css';
-import { CAMPSITES } from './app/shared/CAMPSITES';
 
 function App() {
     return (
@@ -15,7 +14,7 @@ function App() {
                     </NavbarBrand>
                 </Container>
             </Navbar>
-            <CampsitesList campsite={CAMPSITES[0]} />
+            <CampsitesList campsite={CampsitesList[0]} />
         </div>
     );
 }
