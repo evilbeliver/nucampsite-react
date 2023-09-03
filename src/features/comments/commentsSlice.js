@@ -66,6 +66,7 @@ const commentsSlice = createSlice({
             state.errMsg = action.error ? action.error.message : 'Fetch failed';
         },
         [postComment.rejected]: (state, action) => {
+            state.isLoading = false;
             alert('Your comment count not be posted\nError: ' + 
                 (action.error ? action.error.message : 'Fetch failed')
             );
