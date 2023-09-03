@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Button, Modal, ModalHeader, ModalBody, FormGroup, Label } from "reactstrap";
 import { validateCommentForm } from "../../utils/validateCommentForm";
-import { addComment } from "./commentsSlice";
+import { postComment } from "./commentsSlice";
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 
 const CommentForm = ({ campsiteId }) => {
@@ -20,7 +20,7 @@ const CommentForm = ({ campsiteId }) => {
             date: new Date(Date.now()).toISOString()
         };
         console.log('comment', comment);
-        dispatch(addComment(comment));
+        dispatch(postComment(comment));
         setModalOpen(false);
 
     }
